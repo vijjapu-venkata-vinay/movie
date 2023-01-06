@@ -12,7 +12,7 @@ def recommendation(movie):
     return recommended_movies
 movie_dict=pickle.load(open("movie_dict.pkl",'rb'))
 movies=pd.DataFrame(movie_dict)
-model = pickle.load(open('similar.pkl', 'rb'))
+model = pickle.load(open("C:\Users\Jyothsna\OneDrive\Desktop\moviere\similar.pkl", 'rb'))
 st.title('Movie Recommendation System')
 
 option=st.selectbox('select any one option',movies['title'].values)
