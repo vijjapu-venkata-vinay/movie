@@ -10,9 +10,9 @@ def recommendation(movie):
     for i in movie_list:
         recommended_movies.append(movies.iloc[i[0]].title)
     return recommended_movies
-movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
-similarity = pickle.load(open('similar.pkl', 'rb'))
-movies = pd.DataFrame(movies_dict)
+movie_dict=pickle.load(open("movie_dict.pkl",'rb'))
+movies=pd.DataFrame(movie_dict)
+similarity=pickle.load(open("similar.pkl",'rb'))
 st.title('Movie Recommendation System')
 
 option=st.selectbox('select any one option',movies['title'].values)
